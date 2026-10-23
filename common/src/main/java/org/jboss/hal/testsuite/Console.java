@@ -103,7 +103,7 @@ public class Console {
             URL url = new URL(baseUrl, hashFragment);
             browser.navigate().to(url);
             waitModel().until().element(selector).is().present();
-            browser.manage().window().maximize();
+            browser.manage().window().setSize(new org.openqa.selenium.Dimension(1920, 1080));
         } catch (MalformedURLException e) {
             throw new LocationException("Malformed URL: ", e.getCause());
         }
